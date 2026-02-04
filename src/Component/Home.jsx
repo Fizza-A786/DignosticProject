@@ -28,7 +28,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 mt-6">
+          <div className="flex flex-wrap items-center  mt-6">
             <div className="w-[70px] h-[50px] flex items-center justify-center">
               <img
                 src="https://m360soft.com/images/certs/ISO9001.svg"

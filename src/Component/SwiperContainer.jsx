@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import "swiper/css";
 
 const logos = [
@@ -26,7 +25,7 @@ const SwiperContainer = () => {
                     delay: 0,
                     disableOnInteraction: false,
                 }}
-                speed={4000} // controls smoothness
+                speed={4000} 
                 slidesPerView={2}
                 spaceBetween={20}
                 breakpoints={{
