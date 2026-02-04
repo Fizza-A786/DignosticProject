@@ -67,7 +67,7 @@ const Home = () => {
       {/* Video Section - Right */}
       <div className="w-1/2 flex justify-center">
         <video
-          className="w-full h-[500px]"
+          className="w-full h-[500px] "
           autoPlay
           muted
           loop

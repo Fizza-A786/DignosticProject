@@ -9,7 +9,7 @@ const Navbar = () => {
   const [learnOpen, setLearnOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-50 w-full">
+    <nav className="bg-gray-50 w-full z-10">
 
       <div className="flex justify-between items-center px-6 md:px-10 h-[75px]">
         <img src={logo} alt="Logo" className="h-[90px] w-[90px] cursor-pointer" />
