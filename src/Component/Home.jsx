@@ -27,7 +27,7 @@ const Home = () => {
           </button>
 
         </div>
-        <div className="flex items-center gap-8 w-[50%]">
+        <div className="flex items-center w-[50%]">
           <div className="w-[70px] h-[50px] flex items-center justify-center">
             <img
               src="https://m360soft.com/images/certs/ISO9001.svg"
@@ -48,7 +48,7 @@ const Home = () => {
             <img
               src="https://m360soft.com/images/certs/GSMA.svg"
               alt="GSMA"
-              className="h-full object-contain grayscale brightness-75 opacity-80"
+              className="h-full object-contain grayscale brightness-100 opacity-100"
             />
           </div>
 
@@ -56,7 +56,7 @@ const Home = () => {
             <img
               src="https://m360soft.com/images/certs/ADPC209-Level-4.png"
               alt="ADPC"
-              className="h-[150px] object-contain grayscale brightness-75 opacity-80"
+              className="h-[150px] object-contain grayscale brightness-100 opacity-100"
             />
           </div>
         </div>
