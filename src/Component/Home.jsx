@@ -65,18 +65,18 @@ const Home = () => {
       </div>
 
       {/* Video Section - Right */}
-      <div className="w-1/2 flex justify-center">
-        <video
-          className="w-full h-[500px] "
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="https://m360soft.com/videos/home.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <div className="hidden lg:flex w-1/2 justify-center">
+  <video
+    className="w-full h-[500px]"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="https://m360soft.com/videos/home.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
     </div>
   );
