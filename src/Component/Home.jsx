@@ -2,9 +2,9 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="w-full h-[100vh] bg-gradient-to-b from-[#e2edf5] to-[#ebebeb] flex items-center justify-center sm:px-18 px-5 ">
+    <div className="w-full h-[90vh] bg-gradient-to-b from-[#e2edf5] to-[#ebebeb] flex items-center justify-center sm:px-18 px-5 ">
 
-      <div className="w-full flex justify-center px-4 py-10">
+      <div className="w-full flex justify-center">
         <div className="w-full max-w-5xl text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold w-full">
             The <span className="text-[#b2246a]">#1 Diagnostic Software</span> for used devices
@@ -28,7 +28,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="flex flex-wrap items-center  mt-6">
+          <div className="flex flex-wrap items-center mt-6">
             <div className="w-[70px] h-[50px] flex items-center justify-center">
               <img
                 src="https://m360soft.com/images/certs/ISO9001.svg"
