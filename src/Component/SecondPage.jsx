@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const SecondPage = () => {
-  const [activeStep, setActiveStep] = useState("Certified Data Erasure");
+  const [activeStep, setActiveStep] = useState("Connect");
 
   const steps = [
     "Connect",
@@ -16,7 +16,7 @@ const SecondPage = () => {
       title: "Instant device insights",
       description:
         "Access essential information such as IMEI, serial number, device origin, security features, network status, blacklist check and more.",
-      button: "start For Free",
+      button: "Start For Free",
       image:
         "https://m360soft.com/images/home/streamlines/streamlines-visual-1-new.png",
     },
@@ -48,7 +48,7 @@ const SecondPage = () => {
       title: "M360 Certifications",
       description:
         "Generate comprehensive, device-specific certifications that enhance consumer trust and boost sales.",
-      button:"View sample",
+      button: "View sample",
       image:
         "https://m360soft.com/images/home/streamlines/streamlines-visual-5.png",
     },
@@ -57,8 +57,16 @@ const SecondPage = () => {
   const data = stepData[activeStep];
 
   return (
-    <div className="w-full min-h-[60vh] bg-[linear-gradient(180deg,#e2edf5_21.94%,#ebebeb)] flex flex-col items-center py-8 px-4">
-      <div className="bg-slate-300/50 backdrop-blur-sm rounded inline-flex flex-wrap md:flex-nowrap justify-center items-center gap-3 shadow-inner px-3 py-2 mb-16">
+    <div className="w-full min-h-[70vh] bg-[linear-gradient(180deg,#e2edf5_21.94%,#ebebeb)] flex flex-col items-center py-8 px-4">
+      
+      {/* Centered Top Heading */}
+      <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold text-center mt-16">
+        How M360 <span className="text-[#b2246a]">Streamline</span>  device diagnostics
+
+      </h1>
+
+      {/* Steps Buttons */}
+      <div className="bg-slate-300/50 backdrop-blur-sm rounded inline-flex flex-wrap md:flex-nowrap justify-center items-center gap-3 shadow-inner px-3 py-2 mt-10">
         {steps.map((step) => {
           const isActive = activeStep === step;
           return (
@@ -77,7 +85,9 @@ const SecondPage = () => {
           );
         })}
       </div>
-      <div className="w-full grid md:grid-cols-2 gap-4 items-center  md:py-3 md:px-10">
+
+      {/* Step Content */}
+      <div className="w-full grid md:grid-cols-2 gap-4 items-center md:py-3 md:px-10">
         <div className="flex justify-center">
           <img
             src={data.image}
