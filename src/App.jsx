@@ -6,6 +6,7 @@ import SecondPage from './Component/SecondPage'
 import ThirdPage from './Component/ThirdPage'
 import ForthPage from './Component/ForthPage'
 import FifthPage from './Component/FifthPage'
+import SixthPage from './Component/SixthPage'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <ThirdPage/>
       < ForthPage/>
       < FifthPage/>
+      <SixthPage/>
     </div>
   )
 }

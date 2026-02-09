@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "flickity": "^2.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-flickity-component": "^5.0.0",
     "react-icons": "^5.5.0",
     "swiper": "^12.1.0"
   },

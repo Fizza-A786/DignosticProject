@@ -30,8 +30,6 @@ const cardsData = [
 const FifthPage = () => {
   return (
     <div className="relative w-full min-h-screen px-6 py-20 overflow-hidden">
-
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-contain"
         style={{
@@ -40,28 +38,21 @@ const FifthPage = () => {
         }}
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gray-100/40"></div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto ">
-
-        {/* Heading */}
-        <h1 className="text-4xl font-extrabold text-gray-900 text-center mb-16">
+      <div className="relative z-10 max-w-5xl mx-auto">
+        <h1 className="text-5xl font-extrabold text-gray-900 text-center mb-16">
           Key features
         </h1>
-
-        {/* Top 3 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
           {cardsData.slice(0, 3).map((card, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-2xl w-[270px] h-[380px] p-8 flex flex-col items-center text-center"
+              className="bg-white rounded-2xl shadow-lg w-[280px] h-[370px] p-8 flex flex-col items-center text-center"
             >
               <img
                 src={card.icon}
-                alt=""
-                className="w-19 h-19 mb-6"
+                alt={card.title}
+                className="w-16 h-16 mb-6"
               />
 
               <h3 className="text-2xl font-bold mb-4">
@@ -74,18 +65,16 @@ const FifthPage = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom Center Card */}
         <div className="flex justify-center mt-12">
-          {cardsData.slice(3, 4).map((card, index) => (
+          {cardsData.slice(3).map((card, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-2xl w-[270px] h-[380px] p-8 flex flex-col items-center text-center"
+              className="bg-white rounded-2xl shadow-lg w-[280px] h-[370px] p-8 flex flex-col items-center text-center"
             >
               <img
                 src={card.icon}
-                alt=""
-                className="w-19 h-19 mb-6"
+                alt={card.title}
+                className="w-16 h-16 mb-6"
               />
 
               <h3 className="text-2xl font-bold mb-4">
@@ -97,6 +86,11 @@ const FifthPage = () => {
               </p>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-16">
+          <button className="bg-[#b2246a] hover:bg-[#9d1f5d] text-white px-10 py-4 rounded text-lg font-semibold shadow-lg transition-all">
+            Start For Free
+          </button>
         </div>
 
       </div>
