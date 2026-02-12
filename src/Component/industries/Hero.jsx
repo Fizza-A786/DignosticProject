@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const Hero = () => {
   return (
     <div className="w-full h-[90vh] bg-gradient-to-b from-[#e2edf5] to-[#ebebeb] flex items-center justify-center sm:px-18 px-5 ">
 
@@ -82,4 +82,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;

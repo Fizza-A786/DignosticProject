@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
+// import "./Swiper.css";
 
 const logos = [
     "https://m360soft.com/images/home/partners/the-phone-surgery-v2.svg",
