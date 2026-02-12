@@ -88,7 +88,7 @@ const FifthPage = () => {
           ))}
         </div>
         <div className="flex justify-center mt-16">
-          <button className="bg-[#b2246a] hover:bg-[#9d1f5d] text-white px-10 py-4 rounded text-lg font-semibold shadow-lg transition-all">
+          <button className="bg-[#b2246a] hover:bg-[#b4085e] text-white px-10 py-4 rounded text-lg font-semibold shadow-lg transition-all cursor-pointer">
             Start For Free
           </button>
         </div>
