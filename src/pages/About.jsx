@@ -1,10 +1,15 @@
 import React from 'react'
-import { Hero } from '../Component/about/Hero'
+import { Features } from '../Component/about/Features'
+import FeatuesCards from '../Component/about/FeatuesCards';
+import FeaturesSound from '../Component/about/FeaturesSound';
 
 function About() {
   return (
     <div>
-      <Hero />
+          <Features/>
+          <FeatuesCards/>
+          <FeaturesSound/>
+        
     </div>
   )
 }
