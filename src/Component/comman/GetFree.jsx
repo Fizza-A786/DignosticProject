@@ -91,7 +91,7 @@ const GetFree = () => {
           {/* Register Button */}
           <button
             type="submit"
-            className="w-full bg-[#b02665] hover:bg-[#961f55] text-white font-semibold py-[12px] rounded shadow-sm transition-all text-[16px] mt-2"
+            className="w-full bg-[#b02665] hover:bg-[#961f55] text-white font-semibold py-[12px] rounded shadow-sm transition-all text-[16px] mt-2 cursor-pointer"
           >
             Register
           </button>

@@ -34,7 +34,7 @@ export default function ContactSalesCalendar() {
       </h1>
 
       {/* Main Card */}
-      <div className="w-full max-w-[920px] bg-white rounded-2xl shadow-lg grid grid-cols-1 md:grid-cols-3 overflow-hidden border border-gray-100">
+      <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg grid grid-cols-1 md:grid-cols-3 overflow-hidden border border-gray-100">
         {/* Left Panel */}
         <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100">
           <div className="flex items-center gap-2 text-[#b83280] text-sm font-medium mb-4">

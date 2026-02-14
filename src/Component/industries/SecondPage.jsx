@@ -66,14 +66,14 @@ const SecondPage = () => {
       </h1>
 
       {/* Steps Buttons */}
-      <div className="bg-slate-300/50 backdrop-blur-sm rounded inline-flex flex-wrap md:flex-nowrap justify-center items-center gap-3 shadow-inner px-3 py-2 mt-10">
+      <div className="bg-slate-300/50 backdrop-blur-sm rounded inline-flex flex-wrap md:flex-nowrap justify-center items-center gap-3 shadow-inner px-3 py-2 mt-10 cursor-pointer">
         {steps.map((step) => {
           const isActive = activeStep === step;
           return (
             <button
               key={step}
               onClick={() => setActiveStep(step)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded text-sm sm:text-base font-medium transition-all
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded text-sm sm:text-base font-medium transition-all cursor-pointer
                 ${
                   isActive
                     ? "bg-[#b2246a] text-white shadow-lg"
@@ -92,7 +92,7 @@ const SecondPage = () => {
           <img
             src={data.image}
             alt={activeStep}
-            className="max-h-[400px] object-contain"
+            className="max-h-100 object-contain"
           />
         </div>
 
@@ -103,7 +103,7 @@ const SecondPage = () => {
           <p className="text-gray-600 text-lg md:text-2xl mb-8">
             {data.description}
           </p>
-          <button className="bg-[#b2246a] hover:bg-[#9d1f5d] text-white px-8 py-3 rounded-lg font-semibold">
+          <button className="bg-[#b2246a] hover:bg-[#9d1f5d] text-white px-8 py-3 rounded-lg font-semibold cursor-pointer">
             {data.button}
           </button>
         </div>

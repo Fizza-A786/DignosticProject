@@ -106,7 +106,7 @@ const Form = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-[#B33077]  text-xl text-white font-semibold px-6 py-3 rounded-md  transition"
+                className="bg-[#B33077]  text-xl text-white font-semibold px-6 py-3 rounded-md  transition cursor-pointer"
               >
                 Send
               </button>

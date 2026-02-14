@@ -23,7 +23,7 @@ const FeaturesSound = () => {
             using <span className="font-bold text-[#2d2d2d]">M360</span> right away!
           </p>
 
-          <button className="mt-4 flex items-center gap-2 bg-[#ae215d] hover:bg-[#8e1a4b] text-white px-6 sm:px-8 py-3 rounded-md font-bold transition-colors">
+          <button className="mt-4 flex items-center gap-2 bg-[#ae215d] hover:bg-[#8e1a4b] text-white px-6 sm:px-8 py-3 rounded-md font-bold transition-colors cursor-pointer">
             Get started for free 
             <span className="text-xl">→</span>
           </button>

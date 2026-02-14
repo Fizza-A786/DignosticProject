@@ -38,7 +38,7 @@ const SignIn = () => {
             </label>
             <input
               type="password"
-              className="w-full px-4 py-[11px] border border-[#ced4da] rounded focus:border-[#adb5bd] outline-none transition-all text-gray-800"
+              className="w-full px-4 py-2.75 border border-[#ced4da] rounded focus:border-[#adb5bd] outline-none transition-all text-gray-800"
               placeholder=""
             />
           </div>
@@ -48,7 +48,7 @@ const SignIn = () => {
             <input
               id="remember"
               type="checkbox"
-              className="w-[20px] h-[20px] border-[#ced4da] rounded bg-white checked:bg-[#b02665] focus:ring-0 cursor-pointer accent-[#b02665]"
+              className="w-5 h-[20px] border-[#ced4da] rounded bg-white checked:bg-[#b02665] focus:ring-0 cursor-pointer accent-[#b02665]"
             />
             <label htmlFor="remember" className="ml-3 text-[15px] text-[#495057] cursor-pointer">
               Remember me
@@ -58,7 +58,7 @@ const SignIn = () => {
           {/* Sign In Button - Using the exact Magenta color #b02665 */}
           <button
             type="submit"
-            className="w-full bg-[#b02665] hover:bg-[#961f55] text-white font-semibold py-[13px] rounded shadow-sm transition-all text-[17px] mt-4"
+            className="w-full bg-[#b02665] hover:bg-[#961f55] text-white font-semibold py-3.25 rounded shadow-sm transition-all text-[17px] mt-4"
           >
             Sign In
           </button>

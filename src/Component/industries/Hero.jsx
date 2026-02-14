@@ -14,12 +14,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full mt-5">
-            <button className="py-2.5 px-5 rounded text-white bg-[linear-gradient(16deg,#981455,#c8317b)] hover:bg-[linear-gradient(16deg,#7a1040,#a11f65)] transition-all duration-300 w-full sm:w-auto text-center">
+            <button className="py-2.5 px-5 rounded text-white bg-[linear-gradient(16deg,#981455,#c8317b)] hover:bg-[linear-gradient(16deg,#7a1040,#a11f65)] transition-all duration-300 w-full sm:w-auto text-center cursor-pointer">
               Start For Free
             </button>
 
             <button
-              className="py-2.5 px-5 rounded text-white transition-all duration-300 w-full sm:w-auto text-center"
+              className="py-2.5 px-5 rounded text-white transition-all duration-300 w-full sm:w-auto text-center cursor-pointer"
               style={{ backgroundImage: "linear-gradient(0deg, #1c1c1c, #424242)" }}
               onMouseEnter={e => e.currentTarget.style.backgroundImage = "linear-gradient(16deg, #981455, #c8317b)"}
               onMouseLeave={e => e.currentTarget.style.backgroundImage = "linear-gradient(0deg, #1c1c1c, #424242)"}

@@ -1,4 +1,6 @@
 import React from "react";
+import { TfiCheck } from "react-icons/tfi";
+import { FaStar } from "react-icons/fa";
 
 const plans = [
   {
@@ -16,6 +18,7 @@ const plans = [
       "Device certification",
       "Certified data erasure",
       "Special discounts",
+      "Certified device",
     ],
     button: "Register",
   },
@@ -33,7 +36,8 @@ const plans = [
       "Custom templates",
       "Custom statuses",
       "Basic API access",
-       "Basic API access",
+      "Use default labels",
+      "Basic API access",
     ],
     button: "Configure",
   },
@@ -46,7 +50,11 @@ const plans = [
     sim: 15,
     workstations: 3,
     history: "12 months",
-    features: ["Batch operations", "Reports & statistics","Special discounts",],
+    features: [
+      "Batch operations",
+      "Reports & statistics",
+      "Special discounts",
+    ],
     button: "Configure",
     highlight: true,
   },
@@ -59,19 +67,27 @@ const plans = [
     sim: 50,
     workstations: 10,
     history: "24 months",
-    features: ["Custom labels", "API access", "Priority support","Special discounts",],
+    features: [
+      "Custom labels",
+      "API access",
+      "Priority support",
+      "Special discounts",
+      "Special discounts",
+      "Special discounts",
+    ],
     button: "Configure",
   },
   {
     name: "Enterprise",
-    price: "Custom",
-    period: "",
-    devices: "Unlimited",
-    checks: "Unlimited",
-    sim: "Unlimited",
-    workstations: "Unlimited",
-    history: "Unlimited",
-    features: ["Custom services", "Special discounts","Special discounts", "Dedicated manager"],
+    price: "Contact Us",
+    devices: "A solution tailored specifically to your business.",
+    features: [
+      "Custom services",
+      "Special discounts",
+      "Special discounts",
+      "Dedicated manager",
+      "Get in touch ",
+    ],
     button: "Contact Us",
   },
 ];
@@ -79,29 +95,23 @@ const plans = [
 export default function Pricing1() {
   return (
     <div className="min-h-[120vh] bg-gray-200 flex justify-center items-center p-6">
-      
-      <div className="
-        flex flex-col md:flex-row 
-        gap-6 md:gap-0   /* mobile gap, desktop no gap */
-        max-w-7xl w-full
-      ">
-
+      <div className="flex flex-col md:flex-row gap-6 md:gap-0 max-w-7xl w-full">
         {plans.map((plan, i) => (
           <div
             key={i}
             className={`
-              flex-1 p-9 relative text-center
-              bg-white shadow
-              
-              leading-relaxed
-              ${plan.highlight 
-                ? "border-2 border-[#b2246a] scale-110 z-10" 
-                : ""}
+              flex-1 p-6 relative text-center
+              bg-white 
+              flex flex-col
+              ${
+                plan.highlight
+                  ? "border-2 border-[#b2246a] z-10"
+                  : ""
+              }
             `}
           >
-
             {plan.highlight && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#b2246a] text-white px-3 py-1 text-xs font-semibold rounded">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#b2246a] text-white px-5 py-1 text-xs font-semibold rounded">
                 BEST VALUE
               </div>
             )}
@@ -111,31 +121,41 @@ export default function Pricing1() {
             <h3 className="text-3xl font-extrabold text-[#b2246a] mb-3">
               {plan.price}
               {plan.period && (
-                <span className="text-sm text-gray-500">/{plan.period}</span>
+                <span className="text-sm text-gray-500">
+                  /{plan.period}
+                </span>
               )}
             </h3>
 
+            {/* Plan Details */}
             <div className="space-y-2 text-gray-600 text-sm">
-              <p>{plan.devices} Devices</p>
-              <p>{plan.checks} IMEI Checks</p>
-              <p>{plan.sim} SIM Checks</p>
-              <p>{plan.workstations} Workstations</p>
-              <p>{plan.history}</p>
+              {plan.devices && <p>{plan.devices} Devices</p>}
+              {plan.checks && <p>{plan.checks} IMEI Checks</p>}
+              {plan.sim !== undefined && <p>{plan.sim} SIM Checks</p>}
+              {plan.workstations && <p>{plan.workstations} Workstations</p>}
+              {plan.history && <p>{plan.history}</p>}
             </div>
 
-            <ul className="mt-5 space-y-2 text-sm">
+            {/* Features */}
+            <ul className="mt-5 space-y-3 text-sm">
               {plan.features.map((f, idx) => (
-                <li key={idx}>✔ {f}</li>
+                <li key={idx} className="flex items-start gap-2">
+                  {plan.name === "Enterprise" ? (
+                    <FaStar className="text-yellow-400 mt-1 shrink-0" />
+                  ) : (
+                    <TfiCheck className="text-[#b2246a] mt-1 shrink-0" />
+                  )}
+                  <span className="text-gray-600">{f}</span>
+                </li>
               ))}
             </ul>
 
-            <button className="mt-7 w-full bg-[#b2246a] text-white py-2 rounded hover:bg-pink-900">
+            {/* Button */}
+            <button className="mt-auto mt-7 w-full bg-[#b2246a] text-white py-2 rounded hover:bg-pink-900 transition duration-300 cursor-pointer">
               {plan.button}
             </button>
-
           </div>
         ))}
-
       </div>
     </div>
   );

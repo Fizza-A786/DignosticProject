@@ -71,11 +71,11 @@ const ForthPage = () => {
             <button
               key={step}
               onClick={() => setActiveStep(step)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded text-sm sm:text-base font-medium transition-all
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded text-sm sm:text-base font-medium transition-all cursor-pointer
               ${
                 isActive
-                  ? "bg-[#b2246a] text-white shadow-lg"
-                  : "text-slate-600 hover:text-slate-900 hover:bg-white/40"
+                  ? "bg-[#b2246a] text-white shadow-lg cursor-pointer"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-white/40 cursor-pointer"
               }`}
             >
               {step}
@@ -103,7 +103,7 @@ const ForthPage = () => {
         </div>
 
         {/* Image RIGHT */}
-        <div className="order-1 md:order-2 h-[300px] w-[540px] rounded-2xl overflow-hidden bg-white shadow-lg flex items-center justify-center">
+        <div className="order-1 md:order-2 h-75 w-135 rounded-2xl overflow-hidden bg-white shadow-lg flex items-center justify-center">
           <img
             src={data.image}
             alt={activeStep}

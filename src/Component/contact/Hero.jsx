@@ -60,7 +60,7 @@ const Hero = () => {
 
             <a
               href="#book"
-              className="bg-[#AC2065] text-white font-semibold px-6 py-3 rounded-md  transition"
+              className="bg-[#AC2065] text-white font-semibold px-6 py-3 rounded-md  transition "
             >
               Book a DEMO
             </a>
