@@ -100,7 +100,7 @@ export default function Pricing1() {
           <div
             key={i}
             className={`
-              flex-1 p-6 relative text-center
+              flex-1 p-7 relative text-center
               bg-white 
               flex flex-col
               ${
@@ -121,14 +121,14 @@ export default function Pricing1() {
             <h3 className="text-3xl font-extrabold text-[#b2246a] mb-3">
               {plan.price}
               {plan.period && (
-                <span className="text-sm text-gray-500">
+                <span className="text-[15px] text-gray-500">
                   /{plan.period}
                 </span>
               )}
             </h3>
 
             {/* Plan Details */}
-            <div className="space-y-2 text-gray-600 text-sm">
+            <div className="space-y-2 text-gray-600 text-[15px]">
               {plan.devices && <p>{plan.devices} Devices</p>}
               {plan.checks && <p>{plan.checks} IMEI Checks</p>}
               {plan.sim !== undefined && <p>{plan.sim} SIM Checks</p>}
@@ -137,7 +137,7 @@ export default function Pricing1() {
             </div>
 
             {/* Features */}
-            <ul className="mt-5 space-y-3 text-sm">
+            <ul className="mt-5 space-y-3 text-[15px] p-3.5">
               {plan.features.map((f, idx) => (
                 <li key={idx} className="flex items-start gap-2">
                   {plan.name === "Enterprise" ? (

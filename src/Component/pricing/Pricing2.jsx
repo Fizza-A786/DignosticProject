@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FiCheck } from "react-icons/fi";
+import { TfiCheck } from "react-icons/tfi";
 
 const Pricing2 = () => {
   const [showTable, setShowTable] = useState(false);
@@ -53,7 +54,7 @@ const Pricing2 = () => {
             </thead>
 
             {/* Body */}
-            <tbody className="text-black">
+            <tbody className="text-black text-[15px]">
 
               {[
                 ["Unique Devices", "200", "1,000", "2,000"],
@@ -81,7 +82,7 @@ const Pricing2 = () => {
                   <td className="border-l border-gray-200 p-4">—</td>
                   <td className="border-l border-gray-200 p-4">—</td>
                   <td className="border-l border-gray-200 p-4">
-                    <Check />
+                 <FiCheck className="text-[#b2246a] mx-auto text-lg" />
                   </td>
                 </tr>
               ))}
@@ -89,9 +90,9 @@ const Pricing2 = () => {
               {/* SIM Lock */}
               <tr className="border-t hover:bg-gray-50 transition">
                 <td className="p-4 text-left font-medium">SIM Lock Checks</td>
-                <td className="border-l border-gray-200 p-4"><Check /></td>
-                <td className="border-l border-gray-200 p-4"><Check /></td>
-                <td className="border-l border-gray-200 p-4"><Check /></td>
+                <td className="border-l border-gray-200 p-4">  <FiCheck className="text-[#b2246a] mx-auto text-lg" /></td>
+                <td className="border-l border-gray-200 p-4">  <FiCheck className="text-[#b2246a] mx-auto text-lg" /></td>
+                <td className="border-l border-gray-200 p-4">  <FiCheck className="text-[#b2246a] mx-auto text-lg" /></td>
               </tr>
 
               {/* Buttons */}
@@ -100,7 +101,7 @@ const Pricing2 = () => {
 
                 {[1, 2, 3].map((_, i) => (
                   <td key={i} className="border-l border-gray-200 p-4 text-center">
-                    <button className="bg-[#b2246a] w-full max-w-[150px] mx-auto text-white py-2 rounded-lg hover:bg-pink-700 transition font-semibold shadow">
+                    <button className="bg-[#b2246a] w-full max-w-[150px] mx-auto text-white py-2 rounded-lg hover:bg-pink-900 transition font-semibold shadow">
                       Configure
                     </button>
                   </td>
