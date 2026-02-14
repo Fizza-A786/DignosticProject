@@ -1,10 +1,11 @@
-import React from 'react'
-import Hero from '../Component/pricing/Hero'
+import Pricing1 from '../Component/pricing/Pricing1'
+import Pricing2 from '../Component/pricing/Pricing2'
 
 const Pricing = () => {
   return (
-    <div>
-        <Hero/>
+    <div className=' bg-gray-200 '>
+       <Pricing1/>
+       <Pricing2/>
     </div>
   )
 }

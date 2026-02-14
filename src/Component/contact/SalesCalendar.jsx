@@ -23,82 +23,83 @@ export default function ContactSalesCalendar() {
     "3:30pm",
     "6:00pm",
     "6:30pm",
-    "7:00pm",
-    "7:30pm",
+
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center pt-12 pb-16 font-sans">
+    <div className="min-h-screen flex flex-col items-center pt-8 pb-8 px-4 sm:px-6 lg:px-0 font-sans bg-gray-50">
       {/* Title */}
-      <h1 className="text-[28px] font-semibold text-[#b83280] mb-10">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#b83280] mb-8 text-center">
         Contact Sales
       </h1>
 
       {/* Main Card */}
-      <div className="w-[920px] bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] grid grid-cols-3 overflow-hidden border border-gray-100">
+      <div className="w-full max-w-[920px] bg-white rounded-2xl shadow-lg grid grid-cols-1 md:grid-cols-3 overflow-hidden border border-gray-100">
         {/* Left Panel */}
-        <div className="p-8 border-r border-gray-100">
-          <div className="flex items-center gap-2 text-[#b83280] text-sm font-medium mb-6">
+        <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100">
+          <div className="flex items-center gap-2 text-[#b83280] text-sm font-medium mb-4">
             <FiCalendar className="text-base" />
             Matyas Kurta
           </div>
 
-          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-3">
             30 Min Meeting
           </h2>
 
-          <p className="text-sm text-gray-500 leading-relaxed mb-8">
-            To respect your time and ensure a focused discussion about your
-            used phone business, please answer these brief questions before we
-            meet. Looking forward to connecting!
+          <p className="text-sm sm:text-base text-gray-500 leading-relaxed mb-6">
+            To respect your time and ensure a focused discussion about your used
+            phone business, please answer these brief questions before we meet.
+            Looking forward to connecting!
           </p>
 
-          <div className="space-y-4 text-sm text-gray-600">
+          <div className="space-y-3 text-sm text-gray-600">
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full border border-gray-400" />
+              <div className="w-4 h-4 rounded-full border border-pink-900"  />
               Requires confirmation
             </div>
 
             <div className="flex items-center gap-3">
-              <FiClock />
+              <FiClock className=" text-pink-800"/>
               30m
             </div>
 
             <div className="flex items-center gap-3">
-              <FiVideo />
+              <FiVideo className=" text-pink-800"/>
               Zoom Video
             </div>
 
-            <div className="flex items-center gap-3">
-              <FiGlobe />
+            <div className="flex items-center gap-3 ">
+              <FiGlobe className=" text-pink-800" />
               Asia/Karachi
             </div>
           </div>
         </div>
 
         {/* Calendar Section */}
-        <div className="p-8 border-r border-gray-100">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="font-semibold text-gray-900">February 2026</h3>
-            <div className="flex items-center gap-3 text-gray-400">
-              <FiChevronLeft />
-              <FiChevronRight />
+        <div className="p-6 md:py-8 md:px-1.5 border-b md:border-b-0 md:border-r border-gray-100">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">
+              February 2026
+            </h3>
+            <div className="flex items-center gap-3 text-gray-400 text-lg">
+              <FiChevronLeft className="cursor-pointer hover:text-[#b83280]" />
+              <FiChevronRight className="cursor-pointer hover:text-[#b83280]" />
             </div>
           </div>
 
-          <div className="grid grid-cols-7 text-[11px] font-medium text-gray-400 mb-3">
-            {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map(
-              (d) => (
-                <div key={d} className="text-center">
-                  {d}
-                </div>
-              )
-            )}
+          {/* Weekday labels */}
+          <div className="grid grid-cols-7 text-[10px] sm:text-xs font-medium text-gray-400 mb-2">
+            {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((d) => (
+              <div key={d} className="text-center">
+                {d}
+              </div>
+            ))}
           </div>
 
+          {/* Dates */}
           <div className="space-y-2">
             {weeks.map((week, i) => (
-              <div key={i} className="grid grid-cols-7 gap-2">
+              <div key={i} className="grid grid-cols-7 gap-2 sm:gap-2">
                 {week.map((day, idx) => {
                   const isSelected = day === 12;
                   const isDisabled = day === "";
@@ -106,13 +107,13 @@ export default function ContactSalesCalendar() {
                   return (
                     <div
                       key={idx}
-                      className={`h-10 w-10 flex items-center justify-center text-sm rounded-xl
+                      className={`flex items-center justify-center text-sm rounded-lg px-2 py-2 sm:px-3 sm:py-3
                         ${
                           isSelected
-                            ? "bg-[#b83280] text-white"
+                            ? "bg-[#b83280] text-white font-semibold"
                             : isDisabled
-                            ? ""
-                            : "bg-[#f3f4f6] text-gray-700"
+                            ? "bg-transparent"
+                            : "bg-gray-100 text-gray-700 hover:bg-[#fcd5e5] cursor-pointer transition"
                         }
                       `}
                     >
@@ -126,11 +127,13 @@ export default function ContactSalesCalendar() {
         </div>
 
         {/* Time Section */}
-        <div className="p-8">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="font-semibold text-gray-900">Thu 12</h3>
+        <div className="p-6 md:p-8">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-semibold text-gray-900 text-sm sm:text-base md:text-lg">
+              Thu 12
+            </h3>
 
-            <div className="flex items-center gap-2 text-xs font-medium">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-medium">
               <span className="px-3 py-1 rounded-md bg-gray-200 text-gray-700">
                 12h
               </span>
@@ -144,7 +147,7 @@ export default function ContactSalesCalendar() {
             {times.map((time) => (
               <button
                 key={time}
-                className="w-full py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-700 hover:border-[#b83280] hover:text-[#b83280] transition-all duration-200"
+                className="w-full py-3 sm:py-3.5 rounded-xl border border-gray-200 text-sm sm:text-base font-medium text-gray-700 hover:border-[#b83280] hover:text-[#b83280] transition-all duration-200"
               >
                 {time}
               </button>
@@ -154,7 +157,7 @@ export default function ContactSalesCalendar() {
       </div>
 
       {/* Footer */}
-      <p className="mt-10 text-sm text-gray-600">
+      <p className="mt-8 sm:mt-10 text-sm sm:text-base text-gray-600 text-center">
         For specific information contact us by{" "}
         <span className="text-[#b83280] font-medium">
           support@m360soft.com
